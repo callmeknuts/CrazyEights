@@ -11,29 +11,17 @@ public class Gameplay {
     public static ArrayList<HumanPlayer> startGame() {
         System.out.println("Please enter the number of players.");
         int numPlayers = in.nextInt();
-        if (numPlayers == 2) {
+        /* Create players to start the game */
+        for (int i = 0; i <= numPlayers ; i++) {
+            System.out.println("Please enter your name: ");
+            String name = in.next();
+            ArrayList<Card> hand = Hand.dealHand(); //call dealHand method and assign it to a hand for each player
 
-            /* HumanPlayer 1 */
-            System.out.println("Please enter your name HumanPlayer 1");
-            String name1 = in.next();
-            ArrayList<Card> p1Hand;
-            p1Hand = Hand.dealHand();
-
-            /* HumanPlayer 2 */
-            System.out.println("Please enter your name HumanPlayer 2");
-            String name2 = in.next();
-            ArrayList<Card> p2Hand;
-            p2Hand = Hand.dealHand();
-
-            /* Create HumanPlayer Objects */
-            HumanPlayer humanPlayer1 = new HumanPlayer(name1, p1Hand);
-            HumanPlayer humanPlayer2 = new HumanPlayer(name2, p2Hand);
-
-            /* Create ArrayList of Players */
-            players = new ArrayList<>();
-            players.add(humanPlayer1);
-            players.add(humanPlayer2);
+            HumanPlayer player = new HumanPlayer(name, hand);//create new players
+            players = new ArrayList<>(); //create ArrayList of Players
+            players.add(player);
         }
+
         return players;
     }
     /* Method for each players turn */
