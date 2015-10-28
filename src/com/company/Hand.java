@@ -19,7 +19,7 @@ public class Hand {
             System.out.println(C.toString());
             hand.add(C);
         }
-
+        deck.getTotalCards();
         return hand;
     }
 }
