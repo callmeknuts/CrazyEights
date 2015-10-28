@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Gameplay {
 
     public static Scanner in = new Scanner(System.in);
-    public static ArrayList<Players> playersList; /* Initiate an ArrayList to store players */
+    public static ArrayList<Players> playersList;     /* Initiate an ArrayList to store players */
     public static ArrayList<Deck> stock;              /* ArrayList for cards that can be picked up */
     public static ArrayList<Card> discard;            /* ArrayList for discarded cards */
 
@@ -29,7 +29,7 @@ public class Gameplay {
         playersList.add(com);
 
         int size = Hand.deck.getTotalCards();
-        System.out.println(size);
+        System.out.println("Cards left in deck: " + size);
         return playersList;
     }
 
