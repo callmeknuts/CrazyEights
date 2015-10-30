@@ -13,3 +13,4 @@ public class Players {
     public ArrayList<Card> getHand() {return hand;}
     public void setHand(ArrayList<Card> hand) {this.hand = hand;}
 }
+

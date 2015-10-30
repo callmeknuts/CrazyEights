@@ -3,9 +3,9 @@ package com.company;
 import java.util.ArrayList;
 
 public class Hand {
-    public static ArrayList<Card> hand;     /* ArrayList for each player's hand */
-    public static Deck deck = new Deck();  /* Create deck object */
-    static Card C;                          /* Create card Object */
+    public static ArrayList<Card> hand;     // declare an ArrayList for hand
+    public static Deck deck = new Deck();  // Refer to Deck instance
+    static Card C;                          // Refer to Card Object
 
     /*
      * Deal Hand to each player
@@ -13,10 +13,10 @@ public class Hand {
 
     public static ArrayList<Card> dealHand() {
         hand = new ArrayList<>();
-        System.out.println("Cards drawn: ");
+//        System.out.println("Cards drawn: ");
         for (int i = 0; i < 5; i++) {
             C = deck.drawCard();
-            System.out.println(C.toString());
+//            System.out.println(C.toString());
             hand.add(C);
         }
         deck.getTotalCards();
